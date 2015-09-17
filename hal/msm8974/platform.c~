@@ -34,9 +34,14 @@
 #include "audio_extn.h"
 #include "voice_extn.h"
 #include "sound/compress_params.h"
+<<<<<<< HEAD
 #ifdef HWDEP_CAL_ENABLED
 #include "sound/msmcal-hwdep.h"
 #endif
+=======
+#include "platform_parser.h"
+#include "sound/msmcal-hwdep.h"
+>>>>>>> caf/LA.BF.1.1.1_rb1.26
 
 #define SOUND_TRIGGER_DEVICE_HANDSET_MONO_LOW_POWER_ACDB_ID (100)
 
