@@ -94,19 +94,13 @@
 #define AUDIO_PARAMETER_KEY_VOLUME_BOOST  "volume_boost"
 #define MAX_CAL_NAME 20
 
-<<<<<<< HEAD
 #ifdef HWDEP_CAL_ENABLED
-=======
->>>>>>> caf/LA.BF.1.1.1_rb1.26
 char cal_name_info[WCD9XXX_MAX_CAL][MAX_CAL_NAME] = {
         [WCD9XXX_ANC_CAL] = "anc_cal",
         [WCD9XXX_MBHC_CAL] = "mbhc_cal",
         [WCD9XXX_MAD_CAL] = "mad_cal",
 };
-<<<<<<< HEAD
 #endif
-=======
->>>>>>> caf/LA.BF.1.1.1_rb1.26
 
 enum {
 	VOICE_FEATURE_SET_DEFAULT,
@@ -160,12 +154,7 @@ struct platform_data {
     struct csd_data *csd;
 };
 
-<<<<<<< HEAD
-static int pcm_device_table[AUDIO_USECASE_MAX][2] = {
-=======
-
 static const int pcm_device_table[AUDIO_USECASE_MAX][2] = {
->>>>>>> caf/LA.BF.1.1.1_rb1.26
     [USECASE_AUDIO_PLAYBACK_DEEP_BUFFER] = {DEEP_BUFFER_PCM_DEVICE,
                                             DEEP_BUFFER_PCM_DEVICE},
     [USECASE_AUDIO_PLAYBACK_LOW_LATENCY] = {LOWLATENCY_PCM_DEVICE,
@@ -1101,13 +1090,9 @@ void *platform_init(struct audio_device *adev)
     /* Read one time ssr property */
     audio_extn_ssr_update_enabled();
     audio_extn_spkr_prot_init(adev);
-<<<<<<< HEAD
 #ifdef HWDEP_CAL_ENABLED
     audio_hwdep_send_cal(my_data);
 #endif
-=======
-    audio_hwdep_send_cal(my_data);
->>>>>>> caf/LA.BF.1.1.1_rb1.26
     return my_data;
 }
 
